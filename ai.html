@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | My Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #222;
+      background: #f9f9f9;
+      padding: 40px;
+    }
+
+    .home-container {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(120deg, #0072ff, #00c6ff);
+      color: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .home-container h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .home-container p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      line-height: 1.6em;
+    }
+
+    .home-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #0072ff;
+      background: white;
+      padding: 12px 25px;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: all 0.3s;
+    }
+
+    .home-btn:hover {
+      background: #ffee32;
+      color: #333;
+      transform: scale(1.05);
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 60px;
+      gap: 25px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      width: 280px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      text-align: center;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      color: #0072ff;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="home-container">
+    <h1>Welcome to My Website!</h1>
+    <p>Explore amazing content, learn something new, and experience a modern, easy-to-use interface.</p>
+    <a href="#" class="home-btn">Get Started</a>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" alt="Easy">
+      <h3>Easy to Use</h3>
+      <p>Simple design and intuitive navigation for everyone.</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Fast">
+      <h3>Fast Performance</h3>
+      <p>Loads instantly with optimized and clean code.</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2206/2206368.png" alt="Creative">
+      <h3>Creative Design</h3>
+      <p>Visually appealing layout with beautiful color combinations.</p>
+    </div>
+  </div>
+
+</body>
+</html>
