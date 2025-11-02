@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .container{
-                display: flex;
-                height: calc(100vh - 100px);
-            }
-            .content{
-                   width: 85%;
-                   background-color: gainsboro;
-                   font-size: medium;
-                   font-family:Arial, Helvetica, sans-serif;
-                   
 
-            }
-            .header{
-                width: 5%;
-                background-color: aquamarine;
-                font-family: cursive;
-                font-size: large;
-            }
-            .sidebar{
-                font-family: cursive;
-                background-color:cadetblue;
-                width: 10%;
-                font-size: 30px;
+<head>
+    <style>
+        .container {
+            display: flex;
+            height: calc(100vh - 100px);
+        }
 
-            }
-            a{
-                padding: 18px;
-                display: block;
-                color:rgb(4, 62, 4);
-                text-decoration: none;
+        .content {
+            width: 85%;
+            background-color: gainsboro;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
 
-            }
-            a:hover{
-                background-color: bisque;
-            }
-            iframe{
-                width: 100%;
-                height: 100%;
-            }
 
-        </style>
-    </head>
-    <body>
+        }
+
+        .header {
+            width: 5%;
+            background-color: aquamarine;
+            font-family: cursive;
+            font-size: large;
+        }
+
+        .sidebar {
+            font-family: cursive;
+            background-color: cadetblue;
+            width: 10%;
+            font-size: 30px;
+
+        }
+
+        a {
+            padding: 18px;
+            display: block;
+            color: rgb(4, 62, 4);
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            background-color: bisque;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
     <div class="container">
         <div class="sidebar"><strong>
-            <a href="home.html" target="contentframe">Home</a>
-            <a href="categories.html" target="contentframe">Categories</a>
-            <a href="library.html" target="contentframe">Library</a>
-            <a href="settings.html" target="contentframe">Settings</a>
-            <a href="log.html" target="contentframe" style="margin-top: 600px;"> Logout</a>
-        </strong></div> 
+                <a href="home.html" target="contentframe">Home</a>
+                <a href="categories.html" target="contentframe">Categories</a>
+                <a href="library.html" target="contentframe">Library</a>
+                <a href="settings.html" target="contentframe">Settings</a>
+                <a href="log.html" target="contentframe" style="margin-top: 600px;"> Logout</a>
+            </strong></div>
         <div class="content">
             <iframe name="contentframe" src="ai.html" frameborder="0"></iframe>
         </div>
     </div>
-    </body>
+</body>
+
 </html>
