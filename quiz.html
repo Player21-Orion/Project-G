@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earring Style Quiz | Earrora</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-rose-50 to-white text-gray-800 min-h-screen flex flex-col items-center justify-center p-6">
+
+  <div class="w-full max-w-xl bg-white rounded-2xl shadow-lg p-8" id="quiz-box">
+    <h1 class="text-3xl font-bold text-center mb-6 text-rose-700">✨ Find Your Earring Style ✨</h1>
+    <p class="text-center text-gray-600 mb-6">Answer a few quick questions and get personalized earring recommendations!</p>
+
+    <!-- Question Area -->
+    <div id="question-container">
+      <h2 id="question" class="text-xl font-semibold mb-4"></h2>
+      <div id="options" class="grid grid-cols-1 gap-3"></div>
+    </div>
+
+    <!-- Next Button -->
+    <div class="mt-6 flex justify-center">
+      <button id="next-btn" class="px-6 py-2 bg-rose-600 text-white rounded-full hover:bg-rose-700 hidden">Next ➜</button>
+    </div>
+
+    <!-- Result Area -->
+    <div id="result-container" class="hidden text-center">
+      <h2 class="text-2xl font-semibold text-rose-700 mb-4">Your Style Result 💖</h2>
+      <p id="result-text" class="text-gray-700 mb-4"></p>
+      <a href="#" id="shop-link" class="inline-block px-6 py-3 bg-rose-600 text-white rounded-full hover:bg-rose-700">Shop Recommended Earrings</a>
+    </div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "1️⃣ What’s your go-to vibe for dressing up?",
+        options: [
+          { text: "Elegant & Classic", value: "classic" },
+          { text: "Trendy & Modern", value: "modern" },
+          { text: "Minimal & Chic", value: "minimal" },
+          { text: "Festive & Bold", value: "bold" }
+        ]
+      },
+      {
+        question: "2️⃣ Where are you wearing these earrings?",
+        options: [
+          { text: "Office / Work", value: "classic" },
+          { text: "Casual Day Out", value: "minimal" },
+          { text: "Party / Wedding", value: "bold" },
+          { text: "Date Night", value: "modern" }
+        ]
+      },
+      {
+        question: "3️⃣ Which color do you love most in jewelry?",
+        options: [
+          { text: "Gold", value: "classic" },
+          { text: "Silver", value: "modern" },
+          { text: "Rose Gold", value: "minimal" },
+          { text: "Multicolor / Stones", value: "bold" }
+        ]
+      },
+      {
+        question: "4️⃣ What’s your preferred earring size?",
+        options: [
+          { text: "Small Studs", value: "minimal" },
+          { text: "Medium Hoops", value: "modern" },
+          { text: "Long Danglers", value: "bold" },
+          { text: "Pearl Drops", value: "classic" }
+        ]
+      },
+      {
+        question: "5️⃣ Pick your style icon:",
+        options: [
+          { text: "Deepika Padukone – Timeless", value: "classic" },
+          { text: "Alia Bhatt – Cute & Trendy", value: "modern" },
+          { text: "Kriti Sanon – Confident & Bold", value: "bold" },
+          { text: "Anushka Sharma – Effortless", value: "minimal" }
+        ]
+      }
+    ];
+
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const nextBtn = document.getElementById("next-btn");
+    const resultContainer = document.getElementById("result-container");
+    const resultText = document.getElementById("result-text");
+    const shopLink = document.getElementById("shop-link");
+
+    let currentQuestion = 0;
+    let answers = [];
+
+    function loadQuestion() {
+      const q = quizData[currentQuestion];
+      questionEl.textContent = q.question;
+      optionsEl.innerHTML = "";
+      nextBtn.classList.add("hidden");
+
+      q.options.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.textContent = opt.text;
+        btn.className = "px-4 py-2 border border-rose-300 rounded-lg hover:bg-rose-100 transition";
+        btn.onclick = () => {
+          answers.push(opt.value);
+          Array.from(optionsEl.children).forEach(b => b.disabled = true);
+          btn.classList.add("bg-rose-600", "text-white");
+          nextBtn.classList.remove("hidden");
+        };
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    nextBtn.onclick = () => {
+      currentQuestion++;
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    };
+
+    function showResult() {
+      document.getElementById("question-container").classList.add("hidden");
+      nextBtn.classList.add("hidden");
+      resultContainer.classList.remove("hidden");
+
+      const counts = answers.reduce((acc, val) => {
+        acc[val] = (acc[val] || 0) + 1;
+        return acc;
+      }, {});
+
+      const topStyle = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+
+      let styleText = "";
+      let link = "#";
+
+      switch (topStyle) {
+        case "classic":
+          styleText = "You’re Elegant & Classic — pearls, gold studs, and drop earrings suit you perfectly.";
+          link = "https://www.amazon.in/s?k=pearl+earrings";
+          break;
+        case "modern":
+          styleText = "You’re Trendy & Modern — go for chunky hoops or geometric silver designs.";
+          link = "https://www.amazon.in/s?k=hoop+earrings";
+          break;
+        case "minimal":
+          styleText = "You love Minimal & Chic looks — small studs or rose gold tones are your vibe.";
+          link = "https://www.amazon.in/s?k=rose+gold+studs";
+          break;
+        case "bold":
+          styleText = "You’re Bold & Festive — try colorful danglers and statement pieces.";
+          link = "https://www.amazon.in/s?k=statement+earrings";
+          break;
+      }
+
+      resultText.textContent = styleText;
+      shopLink.href = link;
+    }
+
+    // Start quiz
+    loadQuestion();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earrora | Find Your Perfect Earrings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-rose-50 to-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-rose-200 rounded-full flex items-center justify-center text-rose-700 font-bold text-lg">E</div>
+      <h1 class="text-2xl font-semibold">EarFlaunt</h1>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#" class="hover:text-rose-600">Shop</a>
+      <a href="#occasions" class="hover:text-rose-600">Occasions</a>
+      <a href="#quick-finder" class="hover:text-rose-600">Quick Finder</a>
+      <a href="#" class="px-4 py-2 bg-rose-600 text-white rounded-md hover:bg-rose-700">Join Club ✨</a>
+    </nav>
+    <button class="md:hidden p-2 bg-white shadow rounded-md">☰</button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-1">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Find Your Perfect Earrings ✨</h2>
+      <p class="text-gray-600 mb-6 max-w-md">For every moment, every mood, every sparkle. Curated picks for busy women who want to shine — fast.</p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#occasions" class="px-5 py-3 bg-rose-600 text-white rounded-full hover:bg-rose-700">Explore Now</a>
+        <a href="#quick-finder" class="px-5 py-3 border border-rose-300 text-rose-700 rounded-full hover:bg-rose-100">Quick Finder</a>
+      </div>
+    </div>
+
+    <div class="flex-1">
+      <img src="https://images.unsplash.com/photo-1542089363-5f2bb2b6f5de?auto=format&fit=crop&w=900&q=60"
+           alt="earring model"
+           class="rounded-2xl shadow-lg object-cover w-full h-[420px]" />
+    </div>
+  </section>
+
+  <!-- OCCASIONS -->
+  <section id="occasions" class="max-w-7xl mx-auto px-6 py-10">
+    <h3 class="text-3xl font-semibold mb-6 text-center">Shop by Occasion</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="relative group overflow-hidden rounded-xl shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1536083737667-6c1b1f0c8a09?auto=format&fit=crop&w=800&q=60" class="h-60 w-full object-cover group-hover:scale-105 transition-transform" />
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition">
+          <h4 class="text-white text-xl font-semibold">Wedding & Party</h4>
+          <a href="#" class="mt-2 inline-block px-3 py-1 bg-rose-600 text-white text-sm rounded-md">See Styles</a>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-xl shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=60" class="h-60 w-full object-cover group-hover:scale-105 transition-transform" />
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition">
+          <h4 class="text-white text-xl font-semibold">Office Chic</h4>
+          <a href="#" class="mt-2 inline-block px-3 py-1 bg-rose-600 text-white text-sm rounded-md">See Styles</a>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-xl shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1520975698513-8d7c2f1a4b15?auto=format&fit=crop&w=800&q=60" class="h-60 w-full object-cover group-hover:scale-105 transition-transform" />
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition">
+          <h4 class="text-white text-xl font-semibold">Casual Day</h4>
+          <a href="#" class="mt-2 inline-block px-3 py-1 bg-rose-600 text-white text-sm rounded-md">See Styles</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <h3 class="text-3xl font-semibold mb-6 text-center">Top Picks This Week 💫</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1556228720-3e2fd0f3b3d0?auto=format&fit=crop&w=800&q=60" class="w-full h-52 object-cover rounded-lg" />
+        <div class="mt-4 flex justify-between items-center">
+          <div>
+            <h4 class="font-semibold">Pearl Drop Classics</h4>
+            <p class="text-gray-500 text-sm">₹1,299</p>
+          </div>
+          <a href="#" class="px-3 py-2 border border-rose-300 text-rose-700 text-sm rounded-md hover:bg-rose-50">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=60" class="w-full h-52 object-cover rounded-lg" />
+        <div class="mt-4 flex justify-between items-center">
+          <div>
+            <h4 class="font-semibold">Gold Hoops - Minimal</h4>
+            <p class="text-gray-500 text-sm">₹799</p>
+          </div>
+          <a href="#" class="px-3 py-2 border border-rose-300 text-rose-700 text-sm rounded-md hover:bg-rose-50">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1541987395217-3d9a6f1f8b0a?auto=format&fit=crop&w=800&q=60" class="w-full h-52 object-cover rounded-lg" />
+        <div class="mt-4 flex justify-between items-center">
+          <div>
+            <h4 class="font-semibold">Crystal Studs</h4>
+            <p class="text-gray-500 text-sm">₹999</p>
+          </div>
+          <a href="#" class="px-3 py-2 border border-rose-300 text-rose-700 text-sm rounded-md hover:bg-rose-50">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK FINDER -->
+  <section id="quick-finder" class="max-w-7xl mx-auto px-6 py-10">
+    <div class="bg-rose-50 p-8 rounded-2xl flex flex-col md:flex-row items-center gap-6">
+      <div class="flex-1">
+        <h3 class="text-2xl font-semibold mb-2">Quick Style Finder</h3>
+        <p class="text-gray-600">No time? Get 3 perfect earring matches in seconds! Try our quick quiz for personalized picks.</p>
+      </div>
+      <a href="quiz.html" class="px-6 py-3 bg-rose-600 text-white rounded-full hover:bg-rose-700">Take the Quiz 🎯</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-rose-100 py-6 text-center text-gray-700 mt-8">
+    <p class="font-medium">Follow us on 🌸 
+      <a href="#" class="text-rose-700 hover:underline">Instagram</a> | 
+      <a href="#" class="text-rose-700 hover:underline">Pinterest</a>
+    </p>
+    <p class="text-sm mt-2">© 2025 EarFlaunt. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
